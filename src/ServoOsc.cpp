@@ -118,10 +118,11 @@ bool ServoOsc::positionServo(int8_t a, bool t) {
     // Indicate error if not attached
     if (!attached) return false;
 
-    // Adjust angle
-    a += t ? trim : 0;
+    // Reverse if needed
     if(reversed)
         a = -a;
+    // Adjust angle
+    a += t ? trim : 0;
     // Set the angle
     servo.write(a+90);
 
