@@ -107,7 +107,7 @@ public:
     void setPeriod(uint16_t p) {period=p; calcPhaseInc();};
     void setOffset(int8_t o) {offset=o;};
     void setAmplitude(uint8_t a) {amplitude=a;};
-    void setPhase(int8_t p) {phase=DEG2RAD(p);};
+    void setPhase(float p) {phase=DEG2RAD(p);};
     void setTrim(int8_t t) {trim=t;};
     // Sets the pin to attach to if not currently attached. If the attach arg
     // is true (the default), it will also immediatly attach the servo.
