@@ -130,6 +130,7 @@ public:
     // These are more for diagnostics and debugging
     float getPhaseInc() {return phaseInc;};
     float getCurrPhase() {return currPhase;};
+    int getCurrentAngle() {return servo.read();};
 
     // Info
     bool isAttached() {return attached;};
